@@ -2,8 +2,8 @@
 <div class="app">
     <head>
         <link rel="stylesheet" href="index.css">
+        <script src="myscripts.js"></script>
     </head>
-    <script src="myscripts.js"></script>
     <body class="main-container">
 
         <div class="position-basics">
@@ -18,50 +18,39 @@
         
         <div class="topbar"> 
             <div class ="option">
-                <p class="curr-selection"> Sort By </p>
+                <p> Sort By </p>
                 <div class="dropdown">
-                    <button  class="dropbtn">Sort By</button>
+                    <button  id="sort-selection" class="dropbtn">Sort By</button>
                     <div class="dropdown-content">
-                      <a href="#">None</a>
-                      <a onclick="myFunction()" href="#">High to Low Qualifiying</a>
-                      <a href="#">Low to High Qualifying </a>
+                      <a onclick="filterSort('None')" href="#">None</a>
+                      <a onclick="filterSort('High to Low Qualifying')" href="#">High to Low Qualifiying</a>
+                      <a onclick="filterSort('Alphabetic Sort')"href="#"> Alphabetic Sort </a>
                     </div>
                 </div>
             </div>
 
             <div class ="option">
-                <p>Resume/CV Status</p>
+                <p >Office</p>
                 <div class="dropdown">
-                    <button class="dropbtn">Resume/CV Status</button>
+                    <button id="office-selection" class="dropbtn">Office</button>
                     <div class="dropdown-content">
-                      <a href="#">Available</a>
-                      <a href="#">Not Available</a>
-                    </div>
-                  </div>
-        </div>
-
-            <div class ="option">
-                <p>Office</p>
-                <div class="dropdown">
-                    <button class="dropbtn">Office</button>
-                    <div class="dropdown-content">
-                      <a href="#">All Offices</a>
-                      <a href="#">Seattle</a>
-                      <a href="#">Bellevue</a>
-                      <a href="#">Snoqualmie</a>
+                      <a onclick="filterOffice('All Offices')" href="#">All Offices</a>
+                      <a onclick="filterOffice('Seattle')" href="#">Seattle</a>
+                      <a onclick="filterOffice('Bellevue')" href="#">Bellevue</a>
+                      <a onclick="filterOffice('Snoqualmie')" href="#">Snoqualmie</a>
                     </div>
                   </div>
             </div>
 
             <div class ="option">
-              <p>Status</p>
+              <p >Status</p>
               <div class="dropdown">
-                  <button class="dropbtn">Status</button>
+                  <button id="status-selection" class="dropbtn">Status</button>
                   <div class="dropdown-content">
-                    <a href="#">All Status</a>
-                    <a href="#">Application</a>
-                    <a href="#">Pre-Screening</a>
-                    <a href="#">Interviewing</a>
+                    <a onclick="filterStatus('All Status')" href="#">All Status</a>
+                    <a onclick="filterStatus('Application')" href="#">Application</a>
+                    <a onclick="filterStatus('Pre-Screening')" href="#">Pre-Screening</a>
+                    <a onclick="filterStatus('Interviewing')" href="#">Interviewing</a>
                   </div>
                 </div>
           </div>
@@ -80,14 +69,12 @@
               <tr>
                 <th>Full Name</th>
                 <th>Candidate ID</th>
-                <th>Resume/CV</th>
                 <th>Location</th>
                 <th>Status</th>
               </tr>
               <tr>
                 <td>applicants name</td>
                 <td>candidate id</td>
-                <td>available/not available</td>
                 <td>Location</td>
                 <td>Application - Prescreening - Interviewing</td>
               </tr>

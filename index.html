@@ -2,6 +2,7 @@
 <div class="app">
     <head>
         <link rel="stylesheet" href="index.css">
+        <script src="myscripts.js"></script>
     </head>
     <body class="main-container">
         <div class="topbar"> 
@@ -9,10 +10,10 @@
             <div class ="option">
                 <p>Job Status</p>
                 <div class="dropdown">
-                    <button class="dropbtn">Job Status</button>
+                    <button id='job-status-selection' class="dropbtn">Job Status</button>
                     <div class="dropdown-content">
-                      <a href="#">Open</a>
-                      <a href="#">Closed</a>
+                      <a onclick="filterJobStat('Open')" href="#">Open</a>
+                      <a onclick="filterJobStat('Closed')" href="#">Closed</a>
                     </div>
                   </div>
             </div>
@@ -20,35 +21,36 @@
             <div class ="option">
                 <p>Departments</p>
                 <div class="dropdown">
-                    <button class="dropbtn">Departments</button>
+                    <button id='dept-selection' class="dropbtn">Departments</button>
                     <div class="dropdown-content">
-                      <a href="#">All Departments</a>
-                      <a href="#">IT</a>
-                      <a href="#">Design</a>
-                      <a href="#">R&D</a>
-                      <a href="#">Sales</a>
-                      <a href="#">HR</a>
-                      <a href="#">Finance and Accounting</a>
-                      <a href="#">Legal</a>
-                      <a href="#">Marketing</a>
-                      <a href="#">Operations</a>
-                      <a href="#">Executive</a>
+                      <a onclick="filterDept('All Departments')" href="#">All Departments</a>
+                      <a onclick="filterDept('IT')" href="#">IT</a>
+                      <a onclick="filterDept('Design')" href="#">Design</a>
+                      <a onclick="filterDept('R&D')" href="#">R&D</a>
+                      <a onclick="filterDept('Sales')"href="#">Sales</a>
+                      <a onclick="filterDept('HR')" href="#">HR</a>
+                      <a onclick="filterDept('Finance and Accounting')" href="#">Finance and Accounting</a>
+                      <a onclick="filterDept('Legal')" href="#">Legal</a>
+                      <a onclick="filterDept('Marketing')" href="#">Marketing</a>
+                      <a onclick="filterDept('Operations')" href="#">Operations</a>
+                      <a onclick="filterDept('Executive')" href="#">Executive</a>
                     </div>
                   </div>
             </div>
 
             <div class ="option">
-                <p>Office</p>
-                <div class="dropdown">
-                    <button class="dropbtn">Office</button>
-                    <div class="dropdown-content">
-                      <a href="#">All Offices</a>
-                      <a href="#">Seattle</a>
-                      <a href="#">Bellevue</a>
-                      <a href="#">Snoqualmie</a>
-                    </div>
+              <p >Office</p>
+              <div class="dropdown">
+                  <button id="office-selection" class="dropbtn">Office</button>
+                  <div class="dropdown-content">
+                    <a onclick="filterOffice('All Offices')" href="#">All Offices</a>
+                    <a onclick="filterOffice('Seattle')" href="#">Seattle</a>
+                    <a onclick="filterOffice('Bellevue')" href="#">Bellevue</a>
+                    <a onclick="filterOffice('Snoqualmie')" href="#">Snoqualmie</a>
                   </div>
-            </div>
+                </div>
+          </div>
+
             <div class="search-bar">
                     <img src="assets\search vector.svg"/>
                     <div>Search by job title, req ID, or opening ID</div>
