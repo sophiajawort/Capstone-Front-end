@@ -12,16 +12,14 @@
     }
   }
 
-  @font-face {
-    font-family: uncutSans;
-    src: url(Uncut-Sans-VF.ttf);
-  }
 
     .main-container{
         display:flex;
         flex-direction:column;
         justify-content: space-between;
         align-items:center;
+
+        font-family: 'Open Sans', sans-serif;
         
         background: #FFFFFF;
     }
@@ -54,7 +52,7 @@
         flex-direction:column;
         justify-content:flex-start;
         
-        font-family: 'Uncut Sans';
+        font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
@@ -63,12 +61,13 @@
         color: #000000;
     }
 
-        /* Dropdown Button */
+    /* Dropdown Button */
     .dropbtn {
         background-color: #ffffff;
         color: rgb(8, 8, 8);
         padding: 16px;
         font-size: 12px;
+        font-family: 'Open Sans', sans-serif;
         border: none;
         width: 360px;
         height: 23px;
@@ -82,6 +81,7 @@
     
     /* Dropdown Content (Hidden by Default) */
     .dropdown-content {
+        font-family: 'Open Sans', sans-serif;
         display: none;
         position: absolute;
         background-color: #f1f1f1;
@@ -92,6 +92,7 @@
     
     /* Links inside the dropdown */
     .dropdown-content a {
+        font-family: 'Open Sans', sans-serif;
         color: black;
         padding: 12px 16px;
         text-decoration: none;
@@ -105,7 +106,7 @@
     .dropdown:hover .dropdown-content {display: block;}
     
     /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    .dropdown:hover .dropbtn {background-color: #9DD8BD;}
     
 
     .search-bar{
@@ -116,6 +117,8 @@
         bottom:12px;
         width: 1142px;
         height: 31.8px;
+        font-family: 'Open Sans', sans-serif;
+
 
         background: #FFFFFF;
         stroke:#121111;
@@ -160,38 +163,15 @@
     }
 
 
-    /*
-    table {
-        border-collapse:separate;
-        border:solid 3px #C4D7FD;
-        border-radius: 6px;
-    }
-    
-    td, th {
-        border-left:3px Solid #C4D7FD;
-        border-top:3px Solid #C4D7FD;
-    }
-
-    td{
-        padding:8px;
-    }
-    
-    th {
-        background-color: #C4D7FD;
-        border-top: none;
-    }
-    
-    td:first-child, th:first-child {
-         border-left: none;
-    }
-    */
-
-
     .big-container{
+        height:100%;
+        width:100%;
         display:flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items:flex-start;
+        font-family: 'Open Sans', sans-serif;
+
     }
 
     .job-details{
@@ -201,7 +181,11 @@
         width: 516px;
         height: 1211px;
         color: #000000;
-        padding:50px;
+        margin-right:50px;
+        margin-top:50px;
+        margin-bottom:50px;
+        font-family: 'Open Sans', sans-serif;
+
     }
 
     .position-basics{
@@ -215,7 +199,7 @@
         width: 428px;
         height: 62px;
 
-        font-family: 'uncutSans';
+        font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 36px;
@@ -230,7 +214,8 @@
         width: 461px;
     }
     .small-details h2{
-        font-family: 'Uncut Sans';
+        font-family: 'Open Sans', sans-serif;
+
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -280,20 +265,33 @@
         justify-content:space-between;
     }
 
-    #sourcing-container{
-        width: 481px;
-        height: 452px;
-        background: #C4D8FD;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        display:flex;
-    }
 
     a{
-        font-family: 'Uncut Sans';
+        font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: 600;
         color:#000000;
         text-decoration:none;
+    }
 
+    #demographic-holder{
+        width:600px;
+        height:100%;
+        padding:20px;
+        flex: column;
+        justify-content:space-around;
+    }
+
+    #current-applicant-btn{
+        width: 350px;
+        height: 75px;
+        padding:15px;
+        left: 828px;
+        background: #E8AD2C;
+        margin-left:330px;
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(102, 102, 102); 
+        font-size: 10pt; 
+        font-style: normal; 
+        font-weight: normal;
     }
