@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <div class="app">
     <head>
-        <link rel="stylesheet" href="index.css">
-        <script src="myscripts.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="static\index.css">
+        <script src="static\myscripts.js"></script>
+        
     </head>
     <body class="main-container">
 
@@ -14,12 +12,12 @@
             <div class="small-details">
                 <h2 >Status: Open</h2>
                 <h2 >Req ID:12301</h2>
-                <h2 >Office:Bellevue</h2>  
+                <h2 >Office:Bellevue</h2>
             </div>
             <div id="blue-bar"></div>
         </div>
-        
-        <div class="topbar"> 
+
+        <div class="topbar">
             <div class ="option">
                 <p> Sort By </p>
                 <div class="dropdown">
@@ -59,13 +57,13 @@
           </div>
 
             <div class="search-bar">
-                    <img src="assets\search vector.svg"/>
+                    <img src="static\search vector.svg"/>
                     <div>Search by name or candidate ID</div>
             </div>
         </div> <!-- END TOP BAR -->
 
         <!-- Begin current applicant tables-->
-        <!-- This is where the applicants would be generated into to create the table 
+        <!-- This is where the applicants would be generated into to create the table
         based on the filtered criteria. The first row will always stay the same but lines 79-85 are
        format that candidates should be with the information accordingly -->
       <table class="current-applicants">
@@ -75,14 +73,14 @@
                 <th>Location</th>
                 <th>Status</th>
               </tr>
+              {% for row in data %}
               <tr>
-                <td>applicants name</td>
-                <td>candidate id</td>
-                <td>Location</td>
-                <td>Application - Prescreening - Interviewing</td>
+                <td>{{ row.FullName }}</td>
+                <td>{{ row.CandidateID }}</td>
+                <td>{{ row.Location }}</td>
+                <td>{{ row.CurrentStatus }}</td>
               </tr>
-        
-            </tr>
+              {% endfor %}
         </table>
         <!-- END Table of applicants -->
 
